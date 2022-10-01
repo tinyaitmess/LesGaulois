@@ -46,7 +46,8 @@ public class Gaulois {
 		System.out.println(asterix);
 //		System.out.println(asterix.prendreParole());
 		asterix.parler("Obelix ! Où es-tu ?");
-//		asterix.frapper(cesar);
+		Romain minus = new Romain ("Minus",6);
+		asterix.frapper(minus);
 	}
 
 }
