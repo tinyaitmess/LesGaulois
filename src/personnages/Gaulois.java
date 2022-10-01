@@ -44,7 +44,9 @@ public class Gaulois {
 		Gaulois asterix = new Gaulois("Astérix",8) ;
 		System.out.println(asterix.getNom());
 		System.out.println(asterix);
-		
+//		System.out.println(asterix.prendreParole());
+		asterix.parler("Obelix ! Où es-tu ?");
+//		asterix.frapper(cesar);
 	}
 
 }

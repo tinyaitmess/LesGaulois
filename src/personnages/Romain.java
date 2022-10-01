@@ -5,7 +5,6 @@ public class Romain {
 	private int force;
 	
 	public Romain(String nom, int force) {
-		super ();
 		this.nom = nom;
 		this.force = force;
 	}
@@ -28,5 +27,13 @@ public class Romain {
 			parler("J'abandonne...");
 		}
 	}
-
+	
+	public static void main (String[] args) {
+		Romain cesar= new Romain ("Cesar",2);
+		System.out.println(cesar.getNom());
+//		System.out.println(cesar);
+//		System.out.println(cesar.prendreParole());
+		cesar.parler("je t'aurai un jour Astérix !!");
+		cesar.recevoirCoup(5);
+	}
 }
