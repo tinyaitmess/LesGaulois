@@ -15,7 +15,7 @@ public class Druide {
 				+"d'une force " + effetPotionMin + " à "
 				+ effetPotionMax + ".");
 	}
-	public void preparerPotion(Druide druide) {
+	public void preparerPotion() {
 		Random objet = new Random ();
 		int forcePotion;
 		forcePotion= effetPotionMin+ objet.nextInt(effetPotionMax-effetPotionMin);
@@ -40,7 +40,11 @@ public class Druide {
 	}
 	
 	private void booster (Gaulois gaulois) {
-		
+		if ((gaulois.nom)=("Obélix")) {
+			nom.parler("Non, Obélix !... Tu n’auras pas de potion magique ! ");
+		} else {
+			
+		}
 	}
 	
 	public static void main(String[]args) {
