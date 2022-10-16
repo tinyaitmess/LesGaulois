@@ -3,7 +3,7 @@ package personnages;
 public class Village {
 	private String nom;
 	private Chef chef;
-	private int nbVillageoisMaximum=0;
+	private int nbVillageoisMaximum=10;
 	private Gaulois[] villageois;
 	private int nbVillageois=0;
 	
@@ -11,8 +11,9 @@ public class Village {
 	public Village(String nom,int nbVillageoisMaximum) {
 		super();
 		Gaulois [] villageois = new Gaulois[nbVillageoisMaximum];
-		this.nbVillageois = nbVillageoisMaximum;
+		this.nbVillageois = nbVillageois;
 	}
+	
 
 
 
