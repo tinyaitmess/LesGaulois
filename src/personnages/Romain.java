@@ -13,7 +13,7 @@ public class Romain {
 		return nom;
 	}
 	public void parler(String texte) {
-		System.out.println(prendreParole() + "Â« " + texte + "Â»");
+		System.out.println(prendreParole() + "« " + texte + "»");
 	}
 	
 	private String prendreParole() {
@@ -33,7 +33,7 @@ public class Romain {
 		System.out.println(cesar.getNom());
 //		System.out.println(cesar);
 //		System.out.println(cesar.prendreParole());
-		cesar.parler("je t'aurai un jour AstÃ©rix !!");
+		cesar.parler("je t'aurai un jour Astérix !!");
 		cesar.recevoirCoup(5);
 	}
 }
