@@ -15,8 +15,6 @@ public class Village {
 	}
 	
 
-
-
 	public void setVillageois(Gaulois[] villageois) {
 		this.villageois = villageois;
 	}
