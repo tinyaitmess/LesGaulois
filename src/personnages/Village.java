@@ -10,7 +10,7 @@ public class Village {
 	
 	public Village(String nom,int nbVillageoisMaximum) {
 		super();
-		Gaulois [] villageois = new Gaulois[nbVillageoisMaximum];
+		villageois = new Gaulois[nbVillageoisMaximum];
 		this.nbVillageois = nbVillageois;
 	}
 	
@@ -46,24 +46,26 @@ public class Village {
 	}
 	
 	public void afficherVillageois() {
-		System.out.println("Dans le village du chef"+chef.getNom()+"vivent les lÃ©gendaires"
+		System.out.println("Dans le village du chef"+chef.getNom()+"vivent les légendaires"
 							+"gaulois :");
 	}
 	
 	public static void main (String[] args) {
-		Village village = new Village ("Village des IrrÃ©ductibles",30);
+		Village village = new Village ("Village des Irréductibles",30);
 //		Gaulois gaulois = village.trouverHabitant(30);
+//		Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 30
+//		at personnages.Village.trouverHabitant(Village.java:45)
+//		at personnages.Village.main(Village.java:55)
 		
 		Chef chef = new Chef ("Abraracourcix ",6,1,village) ;
-		Gaulois asterix = new Gaulois("AstÃ©rix",8);
+		Gaulois asterix = new Gaulois("Astérix",8);
 		village.ajouterHabitant(asterix);
 		
-//		Gaulois gaulois = village.trouverHabitant(1);
+//		Gaulois gaulois = village.trouverHabitant(0);
 //		System.out.println(gaulois);
-//		Exception in thread "main" java.lang.NullPointerException: Cannot store to object array because "this.villageois" is null
-//		at personnages.Village.ajouterHabitant(Village.java:31)
-//		at personnages.Village.main(Village.java:44)
-		Gaulois obelix = new Gaulois ("ObÃ©lix",25);
+//		Gaulois [nom=Astérix, force=8, effetPotion=1]
+
+		Gaulois obelix = new Gaulois ("Obélix",25);
 		village.ajouterHabitant(obelix);
 		
 		
