@@ -9,7 +9,7 @@ public class Romain {
 	public Romain(String nom, int force) {
 		this.nom = nom;
 		this.force = force;
-		assert force>=0 : " la force d’un Romain est toujours positive";
+		assert force>=0 : " la force dï¿½un Romain est toujours positive";
 		equipements = new Equipement[2];
 	}
 	
@@ -24,7 +24,7 @@ public class Romain {
 		return "Le romain " + nom + " : ";
 	}
 	public void recevoirCoup(int forceCoup) {
-		assert force>=0 : " la force d’un Romain est toujours positive";
+		assert force>=0 : " la force dï¿½un Romain est toujours positive";
 		int forceAttaque = force;
 		forceAttaque -= forceCoup;
 		if (forceAttaque > 0) {
@@ -32,7 +32,7 @@ public class Romain {
 		} else {
 			parler("J'abandonne...");
 		}
-		assert force>=forceAttaque : "la force d'un Romain a diminué";
+		assert force>=forceAttaque : "la force d'un Romain a diminuï¿½";
 	}
 	
 	public void sEquiper (Equipement equip, Romain romain) {
@@ -40,10 +40,14 @@ public class Romain {
 			case (0):
 				equipements[0]=equip;
 				nbEquipement+=1;
-				System.out.println("le soldat "+romain.getNom()+"s'equipe de "+equip);
+				System.out.println("le soldat "+romain.getNom()+"s'equipe avec un "+equip+" !");
 			break;
 			case(1):
-				if equipements[0]==equip 
+				if (equipements[0]==equip) {
+					System.out.println("le soldat possÃ¨de dÃ©ja un "+equip+" !");
+				}else {
+					
+				}
 		}
 	}
 	
@@ -52,7 +56,7 @@ public class Romain {
 		System.out.println(cesar.getNom());
 		System.out.println(cesar);
 //		System.out.println(cesar.prendreParole());
-//		cesar.parler("je t'aurai un jour Astérix !!");
+//		cesar.parler("je t'aurai un jour Astï¿½rix !!");
 //		cesar.recevoirCoup(5);
 		Equipement objet = Equipement.BOUCLIER;
 		System.out.println(objet);
