@@ -4,6 +4,8 @@ public class Gaulois {
 	public String nom;
 	private int force;
 	private int effetPotion =1;
+	private int nb_trophees; 
+	private Equipement trophees[] = new Equipement[100];
 	
 	public Gaulois (String nom, int force) {
 		this.nom = nom;
