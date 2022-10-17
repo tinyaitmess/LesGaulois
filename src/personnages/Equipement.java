@@ -11,7 +11,7 @@ public enum Equipement {
 	}
 	
 	public String toString() {
-		return "Equipement "+nom;
+		return nom;
 	}
 	
 	public static void main (String[]args ) {

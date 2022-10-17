@@ -40,14 +40,19 @@ public class Romain {
 			case (0):
 				equipements[0]=equip;
 				nbEquipement+=1;
-				System.out.println("le soldat "+romain.getNom()+"s'equipe avec un "+equip+" !");
+				System.out.println("le soldat "+romain.getNom()+" s'equipe avec un "+equip+".");
 			break;
 			case(1):
 				if (equipements[0]==equip) {
-					System.out.println("le soldat possède déja un "+equip+" !");
+					System.out.println("le soldat"+romain.getNom()+" possède déja un "+equip+" !");
 				}else {
-					
+					equipements[1]=equip;
+					nbEquipement+=1;
+					System.out.println("le soldat "+romain.getNom()+" s'equipe avec un "+equip+".");
 				}
+			break;
+			default:
+				System.out.println("le soldat "+romain.getNom()+" est déjà bien protégé !");
 		}
 	}
 	
@@ -58,8 +63,14 @@ public class Romain {
 //		System.out.println(cesar.prendreParole());
 //		cesar.parler("je t'aurai un jour Ast�rix !!");
 //		cesar.recevoirCoup(5);
-		Equipement objet = Equipement.BOUCLIER;
-		System.out.println(objet);
+		Equipement objet = Equipement.CASQUE;
+		Equipement protec= Equipement.BOUCLIER;
+		cesar.sEquiper(objet, cesar);
+		cesar.sEquiper(objet, cesar);
+		cesar.sEquiper(protec, cesar);
+		cesar.sEquiper(objet, cesar);
+
+
 
 	}
 }
