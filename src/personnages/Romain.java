@@ -44,7 +44,7 @@ public class Romain {
 			break;
 			case(1):
 				if (equipements[0]==equip) {
-					System.out.println("le soldat"+romain.getNom()+" possède déja un "+equip+" !");
+					System.out.println("le soldat "+romain.getNom()+" possède déja un "+equip+" !");
 				}else {
 					equipements[1]=equip;
 					nbEquipement+=1;
