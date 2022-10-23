@@ -20,7 +20,7 @@ public class Gaulois {
 	
 	
 	public void parler(String texte) {
-		System.out.println(prendreParole() + "� " + texte + "�");
+		System.out.println(prendreParole() + "<<" + texte + ">>");
 	}
 	
 	
@@ -48,11 +48,11 @@ nbTrophees++) {
 	public void boirePotion (int forcePotion) {
 		effetPotion=forcePotion;
 		parler("Merci Druide, je sens que ma force est "
-							+forcePotion+" fois d�cupl�e.");
+							+forcePotion+" fois decuplée.");
 	}
 	
 	public static void main(String[] args) {
-		Gaulois asterix = new Gaulois("Ast�rix",8) ;
+		Gaulois asterix = new Gaulois("Asterix",8) ;
 		System.out.println(asterix.getNom());
 		System.out.println(asterix);
 		asterix.parler("Obelix ! Où es-tu ?");
