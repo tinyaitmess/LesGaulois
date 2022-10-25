@@ -1,4 +1,5 @@
 package personnages;
+import java.lang.Math;
 
 public class Romain {
 	private String nom;
@@ -38,7 +39,7 @@ public class Romain {
 		int oldForce = force;
 		forceCoup = calculResistanceEquipement(forceCoup);
 		force -= forceCoup;
-		if(force==0) {
+		if(force>=0) {
 			parler("Aïe");
 		} else {
 			equipementEjecte = ejecterEquipement();
@@ -66,7 +67,11 @@ public class Romain {
 		}
 		parler(texte);
 		forceCoup -= resistanceEquipement;
-		return forceCoup;
+		if (forceCoup>0) {
+			return forceCoup;
+		}
+		return 0;
+		
 	}
 		private Equipement[] ejecterEquipement() {
 			Equipement[] equipementEjecte = new Equipement[nbEquipement];
