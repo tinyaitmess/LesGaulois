@@ -10,6 +10,7 @@ public class Village {
 	
 	public Village(String nom,int nbVillageoisMaximum) {
 		super();
+		this.nom=nom;
 		villageois = new Gaulois[nbVillageoisMaximum];
 		this.nbVillageois = nbVillageois;
 	}
@@ -46,26 +47,22 @@ public class Village {
 	}
 	
 	public void afficherVillageois() {
-		System.out.println("Dans le village du chef"+chef.getNom()+"vivent les légendaires"
+		System.out.println("Dans le village du chef"+chef.getNom()+"vivent les lÃ©gendaires"
 							+"gaulois :");
 	}
 	
 	public static void main (String[] args) {
-		Village village = new Village ("Village des Irréductibles",30);
-//		Gaulois gaulois = village.trouverHabitant(30);
-//		Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 30
-//		at personnages.Village.trouverHabitant(Village.java:45)
-//		at personnages.Village.main(Village.java:55)
-		
+		Village village = new Village ("Village des IrrÃ©ductibles",30);
+
 		Chef chef = new Chef ("Abraracourcix ",6,1,village) ;
-		Gaulois asterix = new Gaulois("Astérix",8);
+		Gaulois asterix = new Gaulois("Astï¿½rix",8);
 		village.ajouterHabitant(asterix);
 		
 //		Gaulois gaulois = village.trouverHabitant(0);
 //		System.out.println(gaulois);
-//		Gaulois [nom=Astérix, force=8, effetPotion=1]
+//		Gaulois [nom=Astï¿½rix, force=8, effetPotion=1]
 
-		Gaulois obelix = new Gaulois ("Obélix",25);
+		Gaulois obelix = new Gaulois ("ObÃ©lix",25);
 		village.ajouterHabitant(obelix);
 		
 		
