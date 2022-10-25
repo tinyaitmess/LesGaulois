@@ -55,7 +55,7 @@ public class Village {
 		Village village = new Village ("Village des Irréductibles",30);
 
 		Chef chef = new Chef ("Abraracourcix ",6,1,village) ;
-		Gaulois asterix = new Gaulois("Ast�rix",8);
+		Gaulois asterix = new Gaulois("Astérix",8);
 		village.ajouterHabitant(asterix);
 		
 //		Gaulois gaulois = village.trouverHabitant(0);
@@ -64,9 +64,7 @@ public class Village {
 
 		Gaulois obelix = new Gaulois ("Obélix",25);
 		village.ajouterHabitant(obelix);
-		
-		
-		
+
 	}
 	
 }

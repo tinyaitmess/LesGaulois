@@ -122,7 +122,5 @@ public class Romain {
 		cesar.sEquiper(protec, cesar);
 		cesar.sEquiper(objet, cesar);
 
-
-
 	}
 }

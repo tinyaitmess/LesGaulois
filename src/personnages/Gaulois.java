@@ -1,4 +1,5 @@
 package personnages;
+import personnages.Trophee;
 
 public class Gaulois {
 	private String nom;
@@ -48,6 +49,18 @@ public class Gaulois {
 		effetPotion=forcePotion;
 		parler("Merci Druide, je sens que ma force est "
 							+forcePotion+" fois decuplée.");
+	}
+	
+	public void faireUneDonnation (Musee musee,Gaulois gaulois) {
+		String texte="Le gaulois "+nom+" : « Je donne au musee tous mes trophees :";
+			while(nbTrophees>0) {
+				nbTrophees-=1;
+				musee.donnerTrophees(gaulois, trophees[nbTrophees]);
+				texte +="\n-"+trophees[nbTrophees];
+				trophees[nbTrophees]=null;
+			}
+			texte+="»";
+		System.out.println(texte);
 	}
 	
 	public static void main(String[] args) {
