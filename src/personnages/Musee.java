@@ -1,4 +1,5 @@
 package personnages;
+import personnages.Trophee;
 
 public class Musee {
 	private Trophee[] trophees;
@@ -14,8 +15,15 @@ public class Musee {
 		Trophee don = new Trophee(gaulois,equipement);
 		trophees[nbTrophee]=don;
 		nbTrophee+=1;
-
 	}
 	
+	public String extraireInstructionsCaml(Trophee[] trophees) {
+		String texte="let musee = [\n";
+		for(int i=0;i<trophees.length;i++) {
+			Gaulois donnateur = trophees[i].getGaulois();
+			texte+="	"+trophees[i].donnerNom(donnateur)+","+trophees[i].getEquipement()+";\n";
+		}
+		return texte+"]"  ;
+	}
 	
 }

@@ -31,7 +31,7 @@ public class Gaulois {
 
 	
 	public void frapper(Romain romain) {
-		System.out.println(nom + " envoie un grand coup dans la mÃ¢choire de " + romain.getNom());
+		System.out.println(nom + " envoie un grand coup dans la machoire de " + romain.getNom());
 			Equipement [] tropheesBataille = romain.recevoirCoup((force / 3) * effetPotion);
 		for (int i = 0; tropheesBataille != null && i < tropheesBataille.length; i++,nbTrophees++) {
 			this.trophees[nbTrophees] = tropheesBataille[i];
@@ -52,14 +52,14 @@ public class Gaulois {
 	}
 	
 	public void faireUneDonnation (Musee musee,Gaulois gaulois) {
-		String texte="Le gaulois "+nom+" : Â« Je donne au musee tous mes trophees :";
+		String texte="Le gaulois "+nom+" : « Je donne au musee tous mes trophees :";
 			while(nbTrophees>0) {
 				nbTrophees-=1;
 				musee.donnerTrophees(gaulois, trophees[nbTrophees]);
 				texte +="\n-"+trophees[nbTrophees];
 				trophees[nbTrophees]=null;
 			}
-			texte+="Â»";
+			texte+="»";
 		System.out.println(texte);
 	}
 	
